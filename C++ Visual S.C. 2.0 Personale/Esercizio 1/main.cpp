@@ -1,10 +1,23 @@
 #include <iostream>
 
-//using namespace std;
+class Counter{
+    private:
+        int value;
+
+    public:
+        Counter(){ }
+        ~Counter(){ }
+        int getValue(){ }
+        void increase(){ }
+        
+    
+}
+
+//using namespace std
 
 int main(){
 
-    std::cout << "Ciao Mondo!";
+    
 
     return 0;
 }
