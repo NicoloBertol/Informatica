@@ -1,6 +1,8 @@
 #include "Counter.h"
 #include <iostream>
 
+using namespace std;
+
 Counter::Counter(){
     cout << "istanza dell'oggetto creata!\n";
     value = 0;
