@@ -1,0 +1,1 @@
+int ricercaSequenziale(int vet[], int t, int key);

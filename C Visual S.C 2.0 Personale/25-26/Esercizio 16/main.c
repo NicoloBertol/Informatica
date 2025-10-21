@@ -12,7 +12,27 @@ struct casa{
     double costo;
 };
 
-void calcolacosto(double costomedio){
+void scambia(struct casa* a, struct casa* b){
+    struct casa tmp =*a;
+    *a=*b;
+    *b = tmp;
+}
+
+void bubbleSort(struct casa vet[], int t){
+    int i,j,o=0;
+    for(i=0;i<t-1&&!o;i++){
+        o=1;
+        for(j=0;j<t-i-1;j++){
+            if(vet[j].classe>vet[j+1].classe || (vet[j].classe == vet[j+1].classe && vet[j].metriq < vet[j+1].metriq)){
+                o=0;
+                scambia(&vet[j],&vet[j+1]);
+            }
+        }
+    }
+}
+
+void calcolacosto(double costomedio[]){
+    double x=0;
     if(costomedio[0]>costomedio[1]){
         if(costomedio[2]>costomedio[1]){
             x = costomedio[1];
@@ -24,7 +44,7 @@ void calcolacosto(double costomedio){
         }
     }
     else{
-        if(costomdeio[0]<costomedio[2]){
+        if(costomedio[0]<costomedio[2]){
             x = costomedio[0];
             printf("La casa con il costo piu' piccolo e' la numero 1.");
         }
@@ -43,6 +63,7 @@ int main(){
         printf("Inserisci i metri quadri della casa numero %d: \n",i+1);
         scanf("%d",&c[i].metriq);
 
+        while (getchar() != '\n');
         printf("Inserisci la classe energetica (A-F) della casa numero %d: \n",i+1);
         scanf("%c",&c[i].classe);
 
@@ -52,9 +73,11 @@ int main(){
         costomedio[i] = c[i].costo / c[i].metriq;
     }
 
-    calcolacosto = (costomdeio);
+    calcolacosto(costomedio);
     
-    if()
+    bubbleSort(c,3);
+
+    printf("La classe con la miglior classe energetica e' la numero %d",);
 
     return 0;
 }

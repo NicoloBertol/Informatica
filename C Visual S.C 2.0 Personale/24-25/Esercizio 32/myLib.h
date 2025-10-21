@@ -1,0 +1,1 @@
+int massimo(int vet[], int t);
