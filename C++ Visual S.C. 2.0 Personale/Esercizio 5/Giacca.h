@@ -14,7 +14,7 @@ class Giacca{
         int getTaglia();
         int getPercentuale();
         int Apri(int _percentuale);
-        int Chiudi();
+        int Chiudi(int _percentuale);
         int ApriTot();
         int ChiudiTot();
 };
