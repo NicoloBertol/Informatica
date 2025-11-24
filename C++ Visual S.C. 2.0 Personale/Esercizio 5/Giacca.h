@@ -10,11 +10,11 @@ class Giacca{
     public:
         Giacca();
         void setTaglia(int _taglia);
-        void setPercentuale(int _percentuale);
+        int setPercentuale(int _percentuale);
         int getTaglia();
         int getPercentuale();
-        int Apri(int _percentuale);
-        int Chiudi(int _percentuale);
+        int Apri();
+        int Chiudi();
         int ApriTot();
         int ChiudiTot();
 };

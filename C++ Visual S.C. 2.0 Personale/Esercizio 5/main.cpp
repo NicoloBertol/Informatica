@@ -30,8 +30,8 @@ int main(){
 
     for(int i=0;i<2;i++){
         for(int j=0;j<4;j++){
-            cout << "La giacca e' stata aperta del " << g[i].Apri() << "percento." << endl;
-            cout << "La giacca e' stata chiusa del " << g[i].Chiudi() << "percento." << endl;
+            cout << "La giacca e' stata aperta del " << g[i].Apri(g[i].setPercentuale()) << "percento." << endl;
+            cout << "La giacca e' stata chiusa del " << g[i].Chiudi(g[i].setPercentuale()) << "percento." << endl;
         }
     }
 

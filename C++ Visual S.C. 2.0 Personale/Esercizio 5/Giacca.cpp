@@ -15,13 +15,12 @@ void Giacca::setTaglia(int _taglia){
         cout << "Errore"; 
     }
 }
-void Giacca::setPercentuale(int _percentuale){
+int Giacca::setPercentuale(int _percentuale){
     if(_percentuale >= 0 && _percentuale <= 100){
         percentuale = _percentuale;
+        return percentuale;
     }
-    else{
-        cout << "Errore"; 
-    }
+    
 }
 int Giacca::getTaglia(){
     return taglia;
