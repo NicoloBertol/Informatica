@@ -13,17 +13,19 @@ using namespace std;
 int main(){
 
     Televisore t;
-    bool p=false;
-    int n,r;
+    bool p = false;
+    int n,r,e;
     char s[2];
     cout << "Vuoi accendere il televisore? ";
     cin >> n, "\n";
     if(n==1){
         t.pulsanterosso();
         cout << "Il televisore e' acceso." << endl;
-        cout << "VUoi cambiare canale? ";
+        cout << "Vuoi cambiare canale? ";
         cin << s[0], "\n";
         if(s[0] == "si" || s[0] == "sì"){
+            cout << "Scegli un canale: ";
+            cin >> e;
             cout << "Vuoi andare avanti o indietro (1 per avanti, 0 per indietro)?";
             cin << r,"\n";
             if(r==1){

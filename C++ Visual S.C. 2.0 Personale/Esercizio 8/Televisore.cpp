@@ -6,24 +6,29 @@ Si rendano esplicite le scelte implementative fatte nei commenti all’inizio de
 Testare la classe con un opportuno main.*/
 
 #include "Televisore.h"
+#include <iostream>
+
+using namespace std;
 
 Televisore::Televisore(){
-    acceso = true;
+    acceso = false;
     volume = 0;
     canale = 0;
     silenzioso = false;
 }
 void Televisore::pulsanterosso(){
-    if(acceso == false){
+    if(acceso == false)
         acceso = true;
-    }
+    
 }
 int Televisore::canaleSuccessivo(){
-    if(canale <= 999 && canale >=0)
+    if(canale <= 999 && canale >= 0)
         return canale++;
+    else 
+        cout << "Sei al limite massimo." << endl;
 }
 int Televisore::canalePrecedente(){
-    if(canale <= 999 && canale >=0)
+    if(canale <= 999 && canale >= 0)
         return canale--;
 }
 int Televisore::aumentaVolume(){
