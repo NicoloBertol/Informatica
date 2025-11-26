@@ -1,42 +1,42 @@
-#include "Giacca.h"
 #include <iostream>
+#include "GiaccheAVento.h"
 
-using namespace std;
+GiaccheAVento::GiaccheAVento(){
+  taglia = 50;
+  percentualeChiusura = 100;
+}
 
-Giacca::Giacca(){
-    taglia = 45;
-    percentuale = 0;
+void GiaccheAVento::apri(int a){
+  if(percentualeChiusura - a>=0 && percentualeChiusura - a<=100){
+    percentualeChiusura = percentualeChiusura - a;
+  }
 }
-void Giacca::setTaglia(int _taglia){
-    if(_taglia >= 30 && _taglia <= 60){
-        taglia = _taglia;
-    }
-    else{
-        cout << "Errore"; 
-    }
+
+void GiaccheAVento::chiudi(int a){
+  if(percentualeChiusura + a>=0 && percentualeChiusura + a<=100){
+    percentualeChiusura = percentualeChiusura + a;
+  }
 }
-int Giacca::setPercentuale(int _percentuale){
-    if(_percentuale >= 0 && _percentuale <= 100){
-        percentuale = _percentuale;
-        return percentuale;
-    }
-    
+
+void GiaccheAVento::apriTotalmente(){
+  percentualeChiusura = 0;
 }
-int Giacca::getTaglia(){
-    return taglia;
+
+void GiaccheAVento::chiudiTotalmente(){
+  percentualeChiusura = 100;
 }
-int Giacca::getPercentuale(){
-    return percentuale;
+
+void GiaccheAVento::setTaglia(int t){
+  if(t <= 60 && t >= 30)
+    taglia =  t;
 }
-int Giacca::Apri(int _percentuale){
-    return setPercentuale(getPercentuale()+_percentuale);
+
+int GiaccheAVento::getTaglia(){
+  return taglia;
 }
-int Giacca::Chiudi(int _percentuale){
-    setPercentuale(getPercentuale()-_percentuale);
+
+int GiaccheAVento::getPercentualeChiusura(){
+  return percentualeChiusura;
 }
-int Giacca::ApriTot(){
-    setPercentuale(100);
-}
-int Giacca::ChiudiTot(){
-    setPercentuale(0);
-}
+
+
