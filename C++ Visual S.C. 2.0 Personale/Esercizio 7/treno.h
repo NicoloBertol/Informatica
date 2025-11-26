@@ -24,8 +24,9 @@ class Treno{
         int getViaggiatori_Vagone();
         void sali(int n);
         void scendi(int n);
-        int Viaggiatori_Medi();
+        int Viaggiatori_Medi(int z);
         int Viaggiatori_Tot(int c);
+        int Viaggiatori_Attuali();
 };
 
 #endif

@@ -22,8 +22,8 @@ int main(){
     cin >> m;
     t.setViaggiatori_Vagone(m), "\n";
 
-    for(int i=0;i<5;i++){
-        cout << "Salgono o scendono viaggiatori (0 per il scendono, 1 per il salgono)?";
+    for(int i=0;i<4;i++){
+        cout << "Salgono o scendono viaggiatori (0 se scendono, 1 se salgono)?";
         cin >> q, "\n";
         if(q == 1){ //salgono persone
             cout << "Inserisci il numero di persone che salgono: ";
@@ -37,9 +37,9 @@ int main(){
             t.scendi(r);
         }
     }
-
+    cout << "Il numero di viaggiatori sul treno e': " << t.Viaggiatori_Attuali() << ".\n";
     cout << "Il numero totale di viaggiatori e' stato di " << t.Viaggiatori_Tot(c) << ".\n";
-    cout << "Il numero di viaggiatori medi per vagone e' stato d: " << t.Viaggiatori_Medi() << ".\n";
+    cout << "Il numero di viaggiatori medi per vagone e' stato d: " << t.Viaggiatori_Medi(c) << ".\n";
     
     return 0;
 }

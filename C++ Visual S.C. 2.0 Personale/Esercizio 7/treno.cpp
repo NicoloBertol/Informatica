@@ -26,9 +26,12 @@ void Treno::scendi(int n){
         count = 0;
     }
 }
-int Treno::Viaggiatori_Medi(){
-    return (float)count/numVagoni;
+int Treno::Viaggiatori_Medi(int z){
+    return (float)z/numVagoni;
 }
 int Treno::Viaggiatori_Tot(int c){
     return c;
+}
+int Treno::Viaggiatori_Attuali(){
+    return count;
 }

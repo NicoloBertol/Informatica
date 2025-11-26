@@ -14,28 +14,33 @@ int main(){
 
     Televisore t;
     bool p = false;
-    int n,r,e;
-    char s[2];
-    cout << "Vuoi accendere il televisore? ";
+    int n,r,e,s,scelta=0;
+    cout << "Vuoi accendere il televisore (1 per il si, 0 per no)? ";
     cin >> n, "\n";
     if(n==1){
         t.pulsanterosso();
         cout << "Il televisore e' acceso." << endl;
-        cout << "Vuoi cambiare canale? ";
-        cin << s[0], "\n";
-        if(s[0] == "si" || s[0] == "sì"){
-            cout << "Scegli un canale: ";
-            cin >> e;
-            cout << "Vuoi andare avanti o indietro (1 per avanti, 0 per indietro)?";
-            cin << r,"\n";
-            if(r==1){
-                canaleSuccessivo();
+        while(int x != 0){ 
+            cout << "MENU': 1(imposta canale); 2(Canale Successivo); 3(Canale Precedente); 4(Alza Volume); 5(Abbassa Volume); 0(Esci)" << endl;
+            cout << "Cosa vuoi fare? ";
+            cin >> scelta;
+            if(scelta==1){
+                cout << "Scegli un canale: ";
+                cin >> e;
             }
-            if(r==0){
-                canalePrecedente();
+            if(scelta == 2){
+                cout << "Vuoi andare avanti o indietro (1 per avanti, 0 per indietro)?";
+                cin >> r,"\n";
+                if(r==1){
+                    canaleSuccessivo();
+                }
+                if(r==0){
+                    canalePrecedente();
+                }
             }
         }
         cout << "Vuoi alzare o abbassare il volume?";
     }
+
     return 0;
 }
