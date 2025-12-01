@@ -13,33 +13,42 @@ using namespace std;
 int main(){
 
     Televisore t;
-    bool p = false;
-    int n,r,e,s,scelta=0;
+    
+    int n,e,scelta=0;
     cout << "Vuoi accendere il televisore (1 per il si, 0 per no)? ";
     cin >> n, "\n";
     if(n==1){
         t.pulsanterosso();
         cout << "Il televisore e' acceso." << endl;
-        while(int x != 0){ 
+        do{ 
             cout << "MENU': 1(imposta canale); 2(Canale Successivo); 3(Canale Precedente); 4(Alza Volume); 5(Abbassa Volume); 0(Esci)" << endl;
             cout << "Cosa vuoi fare? ";
             cin >> scelta;
-            if(scelta==1){
-                cout << "Scegli un canale: ";
-                cin >> e;
+
+            switch(scelta){
+                case 1:
+                    cout << "Scegli un canale: ";
+                    cin >> e;
+                    t.impostaCanale(e);
+                    break;
+                case 2:
+                    cout << "Sei al canale " << t.canaleSuccessivo() << endl;
             }
-            if(scelta == 2){
-                cout << "Vuoi andare avanti o indietro (1 per avanti, 0 per indietro)?";
-                cin >> r,"\n";
-                if(r==1){
-                    canaleSuccessivo();
-                }
-                if(r==0){
-                    canalePrecedente();
-                }
+            
+            if(scelta == 3){     
+                cout << "Sei al canale " << t.canalePrecedente() << endl;    
             }
-        }
-        cout << "Vuoi alzare o abbassare il volume?";
+            if(scelta == 4){
+                cout << "Volume: " << t.aumentaVolume() << endl;
+            }
+            if(scelta == 5){
+                cout << "Volume: " << t.abbassaVolume() << endl;
+            }
+            if(scelta == 0){
+                break;
+            }
+        }while(scelta != 0);
+        
     }
 
     return 0;

@@ -18,28 +18,28 @@ dato dalla percentuale di chiusura della giacca a vento maggiore.*/
 using namespace std;
 
 int main(){
-  GiaccheAVento g[2];
-  int a,b,x,y;
-  srand(time(NULL));
+    GiaccheAVento g[2];
+    int a,b,x,y;
+    srand(time(NULL));
 
-  cout << "Inserisci la taglia della prima giacca: ";
-  cin >> a;
-  g[0].setTaglia(a);
+    cout << "Inserisci la taglia della prima giacca: ";
+    cin >> a;
+    g[0].setTaglia(a);
 
-  cout << "Inserisci la taglia della seconda giacca: ";
-  cin >> b;
-  g[1].setTaglia(b);
+    cout << "Inserisci la taglia della seconda giacca: ";
+    cin >> b;
+    g[1].setTaglia(b);
 
-  for(int i=0;i<4;i++){
-    g[i].apri((x = rand()%41)+10);
-    g[i].chiudi((y = rand()%41)+10);
-  }
-  if(g[0].getPercentualeChiusura() > g[1].getPercentualeChiusura()){
-    cout << "La giacca a ventto con la percentuale di chiusura maggiore e' la prima. " << g[0].getPercentualeChiusura() << endl;
-  }
-  else{
-    cout << "La giacca a ventto con la percentuale di chiusura maggiore e' la seconda. " << g[1].getPercentualeChiusura() << endl;
-  }
-  return 0;
+    for(int i=0;i<4;i++){
+        g[i].apri((x = rand()%41)+10);
+        g[i].chiudi((y = rand()%41)+10);
+    }
+    if(g[0].getPercentualeChiusura() > g[1].getPercentualeChiusura()){
+        cout << "La giacca a ventto con la percentuale di chiusura maggiore e' la prima. " << g[0].getPercentualeChiusura() << endl;
+    }
+    else{
+        cout << "La giacca a ventto con la percentuale di chiusura maggiore e' la seconda. " << g[1].getPercentualeChiusura() << endl;
+    }
+    return 0;
 }
 

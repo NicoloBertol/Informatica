@@ -18,10 +18,10 @@ class Televisore{
     public:
         Televisore();
         void pulsanterosso();
-        void canaleSuccessivo();
-        void canalePrecedente();
-        void aumentaVolume();
-        void abbassaVolume();
+        int canaleSuccessivo();
+        int canalePrecedente();
+        int aumentaVolume();
+        int abbassaVolume();
         void impostaCanale(int c);
         void pulsanteSilenzioso();
         void print();
