@@ -6,7 +6,6 @@ class Stack{
     private:
 
     public:
-        Stack();
         void push(int n); // - inserisce un elemento in cima allo Stack
         int pop(); //- elimina e restituisce l'elemento in cima allo Stack
         int top(); //- restituisce senza eliminare l'elemento in cima allo Stack
