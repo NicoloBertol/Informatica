@@ -29,6 +29,7 @@ class Veicolo{
         void frena();
         void accendi();
         void spegni();
+        void print();
 };
 
 #endif

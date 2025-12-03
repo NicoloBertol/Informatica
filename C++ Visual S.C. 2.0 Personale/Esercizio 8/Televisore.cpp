@@ -17,34 +17,44 @@ Televisore::Televisore(){
     silenzioso = false;
 }
 void Televisore::pulsanterosso(){
-    if(acceso == false)
-        acceso = true;
-    
+    acceso = !acceso;
 }
 int Televisore::canaleSuccessivo(){
     if(canale <= 999 && canale >= 0)
-        return canale++;
-    else 
-        cout << "Sei al limite massimo." << endl;
+        return ++canale;
+    else{
+        cout << "Sei al limite massimo." << "\n";
+        return canale;
+    }
 }
 int Televisore::canalePrecedente(){
     if(canale <= 999 && canale >= 0)
-        return canale--;
+        return --canale;
+    else
+        return canale;
 }
 int Televisore::aumentaVolume(){
     if(volume <= 60 && volume >= 0)
-        return volume++;
+        return ++volume;
+    else
+        return volume;
 }
 int Televisore::abbassaVolume(){
     if(volume <= 60 && volume >= 0)
-        return volume--;
+        return --volume;
+    else
+        return volume;
 }
 void Televisore::impostaCanale(int c){
     canale = c;
 }
 void Televisore::pulsanteSilenzioso(){
     silenzioso = true;
+    cout << "Modalita' silenziosa attivata." << "\n";
 }
 void Televisore::print(){
-    Televisore();
+    cout << "Stato televisore: " << acceso << "\n";
+    cout << "Volume: " << volume << "\n";
+    cout << "Canale: " << canale << "\n";
+    cout << "Modalita' silenziosa: " << silenzioso << "\n";
 }

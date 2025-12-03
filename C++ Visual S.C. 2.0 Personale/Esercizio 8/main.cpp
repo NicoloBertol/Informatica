@@ -33,20 +33,23 @@ int main(){
                     break;
                 case 2:
                     cout << "Sei al canale " << t.canaleSuccessivo() << endl;
+                    break;
+                case 3:
+                    cout << "Sei al canale " << t.canalePrecedente() << endl;
+                    break;
+                case 4:
+                    cout << "Volume: " << t.aumentaVolume() << endl;
+                    break;
+                case 5:
+                    cout << "Volume: " << t.abbassaVolume() << endl;
+                    break;
+                case 6:
+                    t.pulsanteSilenzioso();
+                    break;
+                case 0:
+                    break;
             }
-            
-            if(scelta == 3){     
-                cout << "Sei al canale " << t.canalePrecedente() << endl;    
-            }
-            if(scelta == 4){
-                cout << "Volume: " << t.aumentaVolume() << endl;
-            }
-            if(scelta == 5){
-                cout << "Volume: " << t.abbassaVolume() << endl;
-            }
-            if(scelta == 0){
-                break;
-            }
+            t.print();
         }while(scelta != 0);
         
     }

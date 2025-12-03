@@ -22,23 +22,29 @@ int main(){
     Veicolo v;
     
     int n,x;
+    v.Veicolo();
     do{
-        cout << "MENU': 0(Esci); 1(Avvio Motore); 2(Spegnimento Motore); 3(Accelleratore); 4(Freno)" << endl;
+        cout << "MENU': 0(Esci); 1(Avvio Motore); 2(Spegnimento Motore); 3(Accelleratore); 4(Freno); 5(Controlla Parametri)" << endl;
         cout << "Cosa vuoi fare? ";
         cin >> n;
-        if(n==1){
-            v.accendi();
-        }
-        if(n == 2){
-            v.spegni();
-        }
-        if(n == 3){
-            cout << "Inserisci di quanto vuoi accellerare: ";
-            cin >> x;
-            v.accellera(x);
-        }
-        if(n == 4){
-            v.frena();
+        switch(n){
+            case 1:
+                v.accendi();
+                break;
+            case 2:
+                v.spegni();
+                break;
+            case 3:
+                cout << "Inserisci di quanto vuoi accellerare: ";
+                cin >> x;
+                v.accellera(x);
+                break;
+            case 4:
+                v.frena();
+            case 5:
+                v.print();
+            case 0:
+                break;
         }
     }while(n==0);
 

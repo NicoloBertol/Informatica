@@ -49,3 +49,10 @@ void Veicolo::spegni(){
         cout << "Veicolo spento." << endl;
     }
 }
+
+void Veicolo::print(){
+    cout << "Marca: " << marca << endl;
+    cout << "Modello: " << modello << endl;
+    cout << "Velocita': " << velocita << endl;
+    cout << "Stato: " << stato << endl;
+}
