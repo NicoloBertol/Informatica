@@ -18,7 +18,7 @@ void Scarpe::cambiaStretchScarpaDx(int n){
     if(n>=0 && n<=2)
         strdx[n]=!strdx[n];
 }
-void Scarpe::stampa(){
+void Scarpe::stampa(){  
     cout << "Scarpe (dimensione: " << dimensione << ")" << endl;
     cout << "Destra: ";
     for(int i=0;i<3;i++){

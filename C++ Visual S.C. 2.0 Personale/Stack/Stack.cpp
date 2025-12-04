@@ -18,11 +18,19 @@ int pop(){
     }
 }
 int top(){
-
+    return vet[MAX_STACK_SIZE-1];
 }
 bool isEmpty(){
-
+    if(vet[0] == "")
+        return true;
+    else   
+        return false;
 }
 int size(){
-    
+    int counter
+    for(int i=0;i<MAX_STACK_SIZE;i++){
+        if(vet[i]==""){
+            return i;
+        }
+    }
 }
