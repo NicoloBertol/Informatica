@@ -20,9 +20,8 @@ using namespace std;
 
 int main(){
     Veicolo v;
-    
     int n,x;
-    v.Veicolo();
+    
     do{
         cout << "MENU': 0(Esci); 1(Avvio Motore); 2(Spegnimento Motore); 3(Accelleratore); 4(Freno); 5(Controlla Parametri)" << endl;
         cout << "Cosa vuoi fare? ";

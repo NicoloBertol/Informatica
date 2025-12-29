@@ -19,14 +19,23 @@ il main si occupa della stampa a video del valore).*/
 using namespace std;
 
 Veicolo::Veicolo(){
-    cout << "Inserisci la marca: ";
-    cin >> marca[0], "\n";
-    cout << "Inserisci il modello: ";
-    cin >> modello[0], "\n";
-    cout << "Inserisci la velocita': ";
-    cin >> velocita, "\n";
-    cout << "Inserisci lo stato della macchina (1 accesa; 0 spenta): ";
-    cin >> stato, "\n";
+    marca = "Fiat";
+    modello = "Panda";
+    velocita = 0;
+    stato = false;
+}
+
+string Veicolo::getMarca(){
+    return marca;
+}
+string Veicolo::getModello(){
+    return modello;
+}
+int Veicolo::getVelocita(){
+    return velocita;
+}
+bool Veicolo::getStato(){
+    return stato;
 }
 void Veicolo::accellera(int d){
     velocita += d;

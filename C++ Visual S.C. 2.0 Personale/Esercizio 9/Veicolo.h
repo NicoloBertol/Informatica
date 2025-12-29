@@ -16,15 +16,23 @@ il main si occupa della stampa a video del valore).*/
 #ifndef VEICOLO_H
 #define VEICOLO_H
 
+#include <iostream>
+
+using namespace std;
+
 class Veicolo{
     private:
-        char marca[10];
-        char modello[10];
+        string marca;
+        string modello;
         int velocita;
         bool stato;
     
     public:
         Veicolo();
+        string getMarca();
+        string getModello();
+        int getVelocita();
+        bool getStato();
         void accellera(int d);
         void frena();
         void accendi();

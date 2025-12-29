@@ -30,8 +30,10 @@ int Televisore::canaleSuccessivo(){
 int Televisore::canalePrecedente(){
     if(canale <= 999 && canale >= 0)
         return --canale;
-    else
+    else{
+        cout << "Sei al limite massimo." << "\n";
         return canale;
+    }
 }
 int Televisore::aumentaVolume(){
     if(volume <= 60 && volume >= 0)
@@ -46,7 +48,12 @@ int Televisore::abbassaVolume(){
         return volume;
 }
 void Televisore::impostaCanale(int c){
-    canale = c;
+    if(canale <= 999 && canale >= 0){
+        canale = c;
+    }
+    else{
+        cout << "Errore: valore impossibile." << "\n";
+    }
 }
 void Televisore::pulsanteSilenzioso(){
     silenzioso = true;
