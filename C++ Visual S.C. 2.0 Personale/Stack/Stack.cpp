@@ -27,9 +27,9 @@ bool isEmpty(){
         return false;
 }
 int size(){
-    int counter
+    int counter;
     for(int i=0;i<MAX_STACK_SIZE;i++){
-        if(vet[i]==""){
+        if(vet[i] == ""){
             return i;
         }
     }
