@@ -11,6 +11,7 @@ Tavolo::Tavolo(){
 Tavolo::Tavolo(int t, int p){
     n_tavolo = t;
     posti = p;
+    occupato = false;
 }
 void Tavolo::occupa(){
     occupato = true;
@@ -29,17 +30,19 @@ bool Tavolo::Occupato(){
 }
 
 Ristorante::Ristorante(){
-    num_tavoli = 0;
+    num_tavoli = 10;
 }
 void Ristorante::assegna(int p){
     for(int i=0; i<num_tavoli; i++){
-        if(t[i].Occupato() == 0 && t[i].getPosti() >= p){
+        if(t[i].Occupato() == false && t[i].getPosti() >= p){
             t[i].occupa();
-            cout << "Tavolo occupato" << endl;
+            cout << "Tavolo " << t[i].getNTavolo() << " occupato" << endl;
+            break;
         }
         else
             cout << "Nessun tavolo libero." << endl;
     }
+            
 }
 void Ristorante::libera(int n_tavolo){
     for(int i=0; i<num_tavoli; i++){
@@ -47,8 +50,4 @@ void Ristorante::libera(int n_tavolo){
             t[i].libera();
         }
     }
-}
-
-int Ristorante::mostraTavoli(){
-    
 }

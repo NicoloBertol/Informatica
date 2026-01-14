@@ -56,7 +56,7 @@ void Televisore::impostaCanale(int c){
     }
 }
 void Televisore::pulsanteSilenzioso(){
-    silenzioso = true;
+    silenzioso = !silenzioso;
     cout << "Modalita' silenziosa attivata." << "\n";
 }
 void Televisore::print(){

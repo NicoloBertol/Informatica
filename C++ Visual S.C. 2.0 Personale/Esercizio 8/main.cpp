@@ -21,7 +21,7 @@ int main(){
         t.pulsanterosso();
         cout << "Il televisore e' acceso." << endl;
         do{ 
-            cout << "MENU': 1(imposta canale); 2(Canale Successivo); 3(Canale Precedente); 4(Alza Volume); 5(Abbassa Volume); 0(Esci)" << endl;
+            cout << "MENU': 1(imposta canale); 2(Canale Successivo); 3(Canale Precedente); 4(Alza Volume); 5(Abbassa Volume); 6(Silenzia); 0(Esci)" << endl;
             cout << "Cosa vuoi fare? ";
             cin >> scelta;
 

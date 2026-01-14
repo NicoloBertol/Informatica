@@ -24,7 +24,6 @@ class Ristorante{
         Ristorante();
         void assegna(int p);
         void libera(int n_tavolo);
-        int mostraTavoli();
 };
 
 #endif

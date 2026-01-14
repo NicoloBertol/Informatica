@@ -45,7 +45,7 @@ int main(){
             case 0:
                 break;
         }
-    }while(n==0);
+    }while(n!=0);
 
     return 0;
 }

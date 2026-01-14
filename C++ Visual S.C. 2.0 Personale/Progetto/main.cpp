@@ -5,13 +5,11 @@ using namespace std;
 
 int main(){
     Ristorante r;
-    int scelta, p, n;
-
+    int scelta, p, n, x;
+    
     do{
-        cout << "MENU" << endl;
-        cout << "Assegna tavolo (1)" << endl;
-        cout << "Libera tavolo (2)" << endl;
-        cout << "Esci (0)" << endl;
+        cout << "MENU': Assegna tavolo (1); Libera tavolo (2) Esci (0)" << endl;
+        cout << "Scelta: ";
         cin >> scelta;
 
         switch(scelta){
