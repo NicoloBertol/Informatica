@@ -16,15 +16,15 @@ void ApplicationView::draw()
 	std::cout << "  ID VIEW:"<< this << std::endl;
 	std::cout << "  ---------------------------------------------------- " << std::endl;
 */
-	std::cout << "  ---------------------------------------------------- " << std::endl;
-	std::cout << " |                   MVC Application                  |" <<std::endl;
-	std::cout << "  ---------------------------------------------------- " << std::endl;
-	std::cout << " | COMANDI:   [0]Esci - [1]Incrementa - [2]Decrementa |"<<std::endl;
-	std::cout << "  ---------------------------------------------------- " << std::endl;
-	std::cout << "  -------------- " << std::endl;
+	std::cout << "  ------------------------------------------------------------------------------ " << std::endl;
+	std::cout << " |                   		   Gestore Studente                     	|" <<std::endl;
+	std::cout << "  ------------------------------------------------------------------------------ " << std::endl;
+	std::cout << " | COMANDI:   [0]Esci - [1]Inserisci dati - [2]Aggiungi voto - [3]Calcola media |"<<std::endl;
+	std::cout << "  ------------------------------------------------------------------------------ " << std::endl;
+	/*std::cout << "  -------------- " << std::endl;
 	std::cout << " | VALORE: " <<  ((ApplicationModel*)model)->getValue() <<"\t|" <<std::endl;
-	std::cout << "  -------------- " << std::endl;
-	std::cout << "  ------------------------------ " << std::endl;
+	std::cout << "  -------------- " << std::endl;*/
+	std::cout << "  ------------------------------------------------------------------------------ " << std::endl;
 	std::cout << " | INSERIRE il comando scelto: ";
 
 
