@@ -15,7 +15,7 @@ class ApplicationModel : public MVC::Model {
 	string classe;
 public:
 	ApplicationModel();
-	void inserisciDati(string n, string c, string m, string cl);
+	void inserisciDati();
 	void inserisciVoto(float v);
 	int getMedia();
 

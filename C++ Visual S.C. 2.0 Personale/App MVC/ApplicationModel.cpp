@@ -5,24 +5,34 @@
 
 using namespace std;
 
-ApplicationModel::ApplicationModel():mValue(0),Model(){
+ApplicationModel::ApplicationModel():Model(){
 	for(int i=0;i<100;i++){          //setto tutte le celle dell'array voti a -1
 		voti[i] = -1;
 	}
 }
 
-void ApplicationModel::inserisciDati(string n, string c, string m, string cl){
-	nome = n;
-	cognome = c;
-	matricola = m;
-	classe = cl;
+void ApplicationModel::inserisciDati(){
+	string n, c, m, cl;
+	cout << "Nome: ";
+	cin >> n,"\n";
+	cout << "Cognome: ";
+	cin >> c,"\n";
+	cout << "Numero Matricola: ";
+	cin >> m,"\n";
+	cout << "Classe: ";
+	cin >> cl,"\n";
+	cout << "Grazie per aver inserito i dati.";
+
+	notify();//""quando cambia lo stato dell'applicazione"", il View e il Controller vanno aggiornati!!!
+				//per invocare update() del View e e del Controller
 }
 
 //quando cambia lo stato dell'applicazione, il View va aggiornato
 void ApplicationModel::inserisciVoto(float v){
+	int i=0;
 	do{                                                          
 		if(voti[i] == -1){           //se la cella dell'array contiene -1, vuol dire che la cella è vuota e si può inserire un valore
-			voti[i] = voto;         //assegno il valore preso in ingresso
+			voti[i] = v;         //assegno il valore preso in ingresso
 			break;
 		}
 		i++;
