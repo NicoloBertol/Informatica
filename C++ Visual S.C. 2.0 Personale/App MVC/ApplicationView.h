@@ -5,6 +5,7 @@
 
 #include "MVC.h"
 #include "ApplicationModel.h"
+#include "Studente.h"
 
 class ApplicationView : public MVC::View { 
 
@@ -12,7 +13,7 @@ public:
 	ApplicationView(ApplicationModel *m);
 
 	void draw(); 
-
+	Studente acquisisciStudente();
 
 	///virtual void initialize();
 	//void initialize(){ mController = makeController();}

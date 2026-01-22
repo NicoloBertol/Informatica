@@ -2,8 +2,7 @@
 #ifndef APPLICATIONCONTROLLER_H_
 #define APPLICATIONCONTROLLER_H_
 
-
-
+#include "Studente.h"
 #include "MVC.h"
 #include "ApplicationView.h"
 #include "ApplicationModel.h"

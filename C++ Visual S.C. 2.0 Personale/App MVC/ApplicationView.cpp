@@ -30,6 +30,18 @@ void ApplicationView::draw()
 
 }
 
+Studente ApplicationView::acquisisciStudente(){
+	string n, c, m, cl;
+
+	cout << "Nome: ";
+	cin >> n,"\n";
+	cout << "Cognome: ";
+	cin >> c,"\n";
+	cout << "Numero Matricola: ";
+	cin >> m,"\n";
+	cout << "Classe: ";
+	cin >> cl,"\n";
+}
 //void ApplicationView::initialize(){ controller = makeController();}
 //MVC::Controller* MVC::View::makeController() { return new MVC::Controller(this); }
 

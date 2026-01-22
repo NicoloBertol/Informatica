@@ -7,19 +7,12 @@
 
 using namespace std;
 
-class ApplicationModel : public MVC::Model { 
-	string nome;
-	string cognome;
-	string matricola;
-	float voti[100];
-	string classe;
-public:
-	ApplicationModel();
-	void inserisciDati();
-	void inserisciVoto(float v);
-	int getMedia();
-
-	
+class ApplicationModel : public MVC::Model {
+	public:
+		ApplicationModel();
+		void aggiornaDati();
+		void inserisciVoto(float v);
+		int getMedia();
 };
 
 #endif

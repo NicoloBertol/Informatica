@@ -1,5 +1,6 @@
 //#include "StdAfx.h"
 #include "ApplicationModel.h"
+#include "Studente.h"
 #include <string>
 #define N 100
 
@@ -10,21 +11,10 @@ ApplicationModel::ApplicationModel():Model(){
 		voti[i] = -1;
 	}
 }
-
-void ApplicationModel::inserisciDati(){
-	string n, c, m, cl;
-	cout << "Nome: ";
-	cin >> n,"\n";
-	cout << "Cognome: ";
-	cin >> c,"\n";
-	cout << "Numero Matricola: ";
-	cin >> m,"\n";
-	cout << "Classe: ";
-	cin >> cl,"\n";
-	cout << "Grazie per aver inserito i dati.";
-
+void ApplicationModel::aggiornaDati(Studente s︃){
+	
 	notify();//""quando cambia lo stato dell'applicazione"", il View e il Controller vanno aggiornati!!!
-				//per invocare update() del View e e del Controller
+	//per invocare update() del View e e del Controller
 }
 
 //quando cambia lo stato dell'applicazione, il View va aggiornato

@@ -4,6 +4,7 @@
 #include <cstdio>
 #include <cstdlib>
 #include <string>
+#include "Studente.h"
 
 ApplicationController::ApplicationController(ApplicationView *v):Controller(v){
 	//myModel=(ApplicationModel*)model; // per non dover fare ogni volta il cast per usare il model
@@ -13,7 +14,6 @@ ApplicationController::ApplicationController(ApplicationView *v):Controller(v){
 void ApplicationController::logic(){
 
 	int scelta=3;
-	float v;
 
 	std::cin >> scelta;//acquisisce l'input da tastiera (in futuro potrebbe farlo l'handleEvent)
 
@@ -24,9 +24,7 @@ void ApplicationController::logic(){
 			break;
 
 		case 1:
-			
-
-			((ApplicationModel*)model)->inserisciDati();
+			((ApplicationModel*)model)->aggiornaDati(((ApplicationView*)view)->acquisisciStudente());
 			break;
 
 		/*case 2:
