@@ -2,6 +2,8 @@
 #include "ApplicationView.h"
 #include <iostream>
 #include <cstdlib>
+#include "Studente.h"
+
 ApplicationView::ApplicationView(ApplicationModel *m):
 	View(m)
 {}
@@ -35,12 +37,22 @@ Studente ApplicationView::acquisisciStudente(){
 
 	cout << "Nome: ";
 	cin >> n,"\n";
+	Studente::setNome(n);
+	Studente::getNome();
 	cout << "Cognome: ";
 	cin >> c,"\n";
+	Studente::setCognome(c);
+	Studente::getCognome();
 	cout << "Numero Matricola: ";
 	cin >> m,"\n";
+	Studente::setMatricola(m);
+	Studente::getMatricola();
 	cout << "Classe: ";
 	cin >> cl,"\n";
+	Studente::setClasse(cl);
+	Studente::getClasse();
+	
+	return s;
 }
 //void ApplicationView::initialize(){ controller = makeController();}
 //MVC::Controller* MVC::View::makeController() { return new MVC::Controller(this); }

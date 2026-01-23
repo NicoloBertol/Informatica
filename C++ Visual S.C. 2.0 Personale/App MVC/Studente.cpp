@@ -7,6 +7,10 @@ Studente::Studente(){
     cognome = "Bertol";
     matricola = "P6648";
     classe = "4INTA";
+
+	for(int i=0;i<100;i++){          //setto tutte le celle dell'array voti a -1
+		voti[i] = -1;
+	}
 }
 void Studente::setNome(string n){
     nome = n;
