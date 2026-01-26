@@ -24,7 +24,8 @@ void ApplicationController::logic(){
 			break;
 
 		case 1:
-			((ApplicationModel*)model)->aggiornaDati(((ApplicationView*)view)->acquisisciStudente());
+			Studente s;
+			((ApplicationModel*)model)->aggiornaDati(((ApplicationView*)view)->acquisisciStudente(s));
 			break;
 
 		/*case 2:

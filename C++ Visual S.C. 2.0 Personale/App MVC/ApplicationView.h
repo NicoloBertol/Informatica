@@ -13,7 +13,7 @@ public:
 	ApplicationView(ApplicationModel *m);
 
 	void draw(); 
-	Studente acquisisciStudente();
+	Studente acquisisciStudente(Studente &s);
 
 	///virtual void initialize();
 	//void initialize(){ mController = makeController();}

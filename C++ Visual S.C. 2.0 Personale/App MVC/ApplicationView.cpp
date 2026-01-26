@@ -2,6 +2,7 @@
 #include "ApplicationView.h"
 #include <iostream>
 #include <cstdlib>
+#include <fstream>
 #include "Studente.h"
 
 ApplicationView::ApplicationView(ApplicationModel *m):
@@ -32,25 +33,41 @@ void ApplicationView::draw()
 
 }
 
-Studente ApplicationView::acquisisciStudente(){
+Studente ApplicationView::acquisisciStudente(Studente &s){
 	string n, c, m, cl;
+	fstream miofile;
 
 	cout << "Nome: ";
 	cin >> n,"\n";
-	Studente::setNome(n);
-	Studente::getNome();
+	s.setNome(n);
+	s.getNome();
+	miofile.open("prova.txt", ios::app);
+    miofile << "Nome: " << n << endl; //SCRITTURA nel file associato all'oggetto
+    miofile.close();
+
 	cout << "Cognome: ";
 	cin >> c,"\n";
-	Studente::setCognome(c);
-	Studente::getCognome();
+	s.setCognome(c);
+	s.getCognome();
+	miofile.open("prova.txt", ios::app);
+    miofile << "Cognome: " << c << endl; //SCRITTURA nel file associato all'oggetto
+    miofile.close();
+
 	cout << "Numero Matricola: ";
 	cin >> m,"\n";
-	Studente::setMatricola(m);
-	Studente::getMatricola();
+	s.setMatricola(m);
+	s.getMatricola();
+	miofile.open("prova.txt", ios::app);
+    miofile << "Matricola:" << m << endl; //SCRITTURA nel file associato all'oggetto
+    miofile.close();
+
 	cout << "Classe: ";
 	cin >> cl,"\n";
-	Studente::setClasse(cl);
-	Studente::getClasse();
+	s.setClasse(cl);
+	s.getClasse();
+	miofile.open("prova.txt", ios::app);
+    miofile << "Classe: " << cl << endl; //SCRITTURA nel file associato all'oggetto
+    miofile.close();
 	
 	return s;
 }

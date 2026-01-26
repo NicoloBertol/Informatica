@@ -11,7 +11,7 @@ using namespace std;
 class ApplicationModel : public MVC::Model {
 	public:
 		ApplicationModel();
-		void aggiornaDati(Studente s︃);
+		void aggiornaDati(Studente s);
 		//void inserisciVoto(float v);
 		//int getMedia();
 };

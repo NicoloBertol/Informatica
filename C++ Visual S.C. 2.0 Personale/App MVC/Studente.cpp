@@ -1,5 +1,5 @@
 #include "Studente.h"
-
+#define N 100
 using namespace std;
 
 Studente::Studente(){

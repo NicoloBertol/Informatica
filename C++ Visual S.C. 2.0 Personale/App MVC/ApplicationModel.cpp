@@ -9,7 +9,7 @@ using namespace std;
 ApplicationModel::ApplicationModel():Model(){
 	
 }
-void ApplicationModel::aggiornaDati(Studente s︃){
+void ApplicationModel::aggiornaDati(Studente s){
 	
 	notify();//""quando cambia lo stato dell'applicazione"", il View e il Controller vanno aggiornati!!!
 	//per invocare update() del View e e del Controller
