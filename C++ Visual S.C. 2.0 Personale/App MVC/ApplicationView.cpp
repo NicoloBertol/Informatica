@@ -5,9 +5,7 @@
 #include <fstream>
 #include "Studente.h"
 
-ApplicationView::ApplicationView(ApplicationModel *m):
-	View(m)
-{}
+ApplicationView::ApplicationView(ApplicationModel *m):View(m){}
 
 //overriding della funzione MVC::View::draw()
 void ApplicationView::draw()
@@ -41,7 +39,7 @@ Studente ApplicationView::acquisisciStudente(Studente &s){
 	cin >> n,"\n";
 	s.setNome(n);
 	s.getNome();
-	miofile.open("prova.txt", ios::app);
+	miofile.open("Dati.txt", ios::app);
     miofile << "Nome: " << n << endl; //SCRITTURA nel file associato all'oggetto
     miofile.close();
 
@@ -49,7 +47,7 @@ Studente ApplicationView::acquisisciStudente(Studente &s){
 	cin >> c,"\n";
 	s.setCognome(c);
 	s.getCognome();
-	miofile.open("prova.txt", ios::app);
+	miofile.open("Dati.txt", ios::app);
     miofile << "Cognome: " << c << endl; //SCRITTURA nel file associato all'oggetto
     miofile.close();
 
@@ -57,20 +55,26 @@ Studente ApplicationView::acquisisciStudente(Studente &s){
 	cin >> m,"\n";
 	s.setMatricola(m);
 	s.getMatricola();
-	miofile.open("prova.txt", ios::app);
-    miofile << "Matricola:" << m << endl; //SCRITTURA nel file associato all'oggetto
+	miofile.open("Dati.txt", ios::app);
+    miofile << "Matricola: " << m << endl; //SCRITTURA nel file associato all'oggetto
     miofile.close();
 
 	cout << "Classe: ";
 	cin >> cl,"\n";
 	s.setClasse(cl);
 	s.getClasse();
-	miofile.open("prova.txt", ios::app);
-    miofile << "Classe: " << cl << endl; //SCRITTURA nel file associato all'oggetto
+	miofile.open("Dati.txt", ios::app);
+    miofile << "Classe: " << cl << endl << endl; //SCRITTURA nel file associato all'oggetto
     miofile.close();
 	
 	return s;
 }
+/*
+void ApplicationView::inserisciVoto(Studente &s){
+	fstream miofile;
+
+
+}*/
 //void ApplicationView::initialize(){ controller = makeController();}
 //MVC::Controller* MVC::View::makeController() { return new MVC::Controller(this); }
 

@@ -36,7 +36,7 @@ void Studente::setClasse(string cl){
 string Studente::getClasse(){
     return classe;
 }
-void inserisciVoto(float v){
+void Studente::inserisciVoto(float v){
     int i=0;
 	do{                                                          
 		if(voti[i] == -1){           //se la cella dell'array contiene -1, vuol dire che la cella è vuota e si può inserire un valore
@@ -46,7 +46,7 @@ void inserisciVoto(float v){
 		i++;
 	}while(i<N);
 }
-float getMedia(){
+float Studente::getMedia(){
     float somma = 0.0f;
 	int count = 0;
 	for (int i=0;i<N;i++){         //scorro tutto l'array

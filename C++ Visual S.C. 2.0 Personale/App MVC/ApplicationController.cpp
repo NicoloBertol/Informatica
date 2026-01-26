@@ -29,9 +29,9 @@ void ApplicationController::logic(){
 			break;
 
 		/*case 2:
-			((ApplicationModel*)model)->loadValue(((ApplicationModel*)model)->getValue()-1);//decrementa
-			break;
-*/
+			((ApplicationModel*)model)->aggiornaVoti(((ApplicationView*)view)->inserisciVoto(s));
+			break;*/
+
 	/*default
 	:((ApplicationModel*)model)->loadValue(((ApplicationModel*)model)->getValue());//non cambia nulla! Si potrebbe segnale un errore dal view
 		break;

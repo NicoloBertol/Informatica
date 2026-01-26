@@ -16,11 +16,11 @@ void ApplicationModel::aggiornaDati(Studente s){
 }
 
 //quando cambia lo stato dell'applicazione, il View va aggiornato
-void ApplicationModel::inserisciVoto(float v){
+/*void ApplicationModel::aggiornaVoti(Studente s){
 	
 	notify();//""quando cambia lo stato dell'applicazione"", il View e il Controller vanno aggiornati!!!
 				//per invocare update() del View e e del Controller
-}
+}*/
 
 //semplice funzione che restituisce il valore
 /*int ApplicationModel::getMedia(){
