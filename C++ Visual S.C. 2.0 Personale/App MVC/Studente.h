@@ -1,7 +1,7 @@
 #ifndef STUDENTE_H
 #define STUDENTE_H
 
-#include <string>
+#include "MVC.h"
 
 using namespace std;
 
@@ -10,8 +10,8 @@ class Studente{
         string nome;
         string cognome;
         string matricola;
-        float voti[100];
         string classe;
+
     public:
         Studente();
         void setNome(string n);
@@ -22,8 +22,8 @@ class Studente{
         string getMatricola();
         void setClasse(string cl);
         string getClasse();
-        void inserisciVoto(float v);
-        float getMedia();
+        //void inserisciVoto(float v);
+        //float getMedia();
 };
 
 #endif

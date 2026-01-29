@@ -3,6 +3,7 @@
 #define APPLICATIONCONTROLLER_H_
 
 #include "Studente.h"
+#include "Valutazione.h"
 #include "MVC.h"
 #include "ApplicationView.h"
 #include "ApplicationModel.h"

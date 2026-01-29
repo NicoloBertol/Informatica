@@ -3,14 +3,10 @@
 using namespace std;
 
 Studente::Studente(){
-    nome = "Nicolò";
+    nome = "Nicolo'";
     cognome = "Bertol";
     matricola = "P6648";
     classe = "4INTA";
-
-	for(int i=0;i<100;i++){          //setto tutte le celle dell'array voti a -1
-		voti[i] = -1;
-	}
 }
 void Studente::setNome(string n){
     nome = n;
@@ -36,6 +32,7 @@ void Studente::setClasse(string cl){
 string Studente::getClasse(){
     return classe;
 }
+/*
 void Studente::inserisciVoto(float v){
     int i=0;
 	do{                                                          
@@ -60,4 +57,4 @@ float Studente::getMedia(){
 		return 0.0f;
 
 	return somma/count;
-}
+}*/
