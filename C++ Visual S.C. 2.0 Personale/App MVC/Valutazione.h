@@ -3,6 +3,8 @@
 
 #include "MVC.h"
 
+using namespace std;
+
 class Valutazione{
     private:
         float voto;

@@ -4,6 +4,8 @@
 #include <cstdlib>
 #include <fstream>
 
+using namespace std;
+
 ApplicationView::ApplicationView(ApplicationModel *m):View(m){}
 
 //overriding della funzione MVC::View::draw()

@@ -1,5 +1,7 @@
 #include "Valutazione.h"
 
+using namespace std;
+
 Valutazione::Valutazione(){
     voto = 6;
     materia = "Informatica"; 

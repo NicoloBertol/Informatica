@@ -1,0 +1,6 @@
+Materia: Informatica
+Valutazione: 8
+
+Materia: Italiano
+Valutazione: 6.5
+

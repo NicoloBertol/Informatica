@@ -4,6 +4,7 @@
 #include <cstdio>
 #include <cstdlib>
 
+using namespace std;
 
 ApplicationController::ApplicationController(ApplicationView *v):Controller(v){
 	//myModel=(ApplicationModel*)model; // per non dover fare ogni volta il cast per usare il model
@@ -46,5 +47,5 @@ void ApplicationController::logic(){
 }*/
 
 //funzione alla quale in futuro potrebbe essere associata la tastiera
-/*void MVC::Controller::handleEvent(MVC::Event * e) {;//fai qualcosa
-}*/
+void MVC::Controller::handleEvent(MVC::Event * e) {;//fai qualcosa
+}
