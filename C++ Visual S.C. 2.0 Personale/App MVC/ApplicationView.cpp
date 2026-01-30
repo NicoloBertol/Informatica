@@ -3,7 +3,6 @@
 #include <iostream>
 #include <cstdlib>
 #include <fstream>
-#include "Studente.h"
 
 ApplicationView::ApplicationView(ApplicationModel *m):View(m){}
 
@@ -69,12 +68,30 @@ Studente ApplicationView::acquisisciStudente(Studente &s){
 	
 	return s;
 }
-/*
-void ApplicationView::inserisciVoto(Studente &s){
+
+Valutazione ApplicationView::acquisiciVoti(Valutazione &val){
+	string m;
+	float v;
 	fstream miofile;
 
+	cout << "Materia: ";
+	cin >> m, "\n";
+	val.setMateria(m);
+	val.getMateria();
+	miofile.open("Voti.txt", ios::app);
+    miofile << "Materia: " << m << endl; //SCRITTURA nel file associato all'oggetto
+    miofile.close();
 
-}*/
+	cout << "Valutazione: ";
+	cin >> v;
+	val.setVoto(v);
+	val.getVoto();
+	miofile.open("Voti.txt", ios::app);
+    miofile << "Valutazione: " << v << endl << endl; //SCRITTURA nel file associato all'oggetto
+    miofile.close();
+
+	return val;
+}
 //void ApplicationView::initialize(){ controller = makeController();}
 //MVC::Controller* MVC::View::makeController() { return new MVC::Controller(this); }
 

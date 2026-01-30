@@ -3,8 +3,7 @@
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
-#include <string>
-#include "Studente.h"
+
 
 ApplicationController::ApplicationController(ApplicationView *v):Controller(v){
 	//myModel=(ApplicationModel*)model; // per non dover fare ogni volta il cast per usare il model
@@ -12,7 +11,8 @@ ApplicationController::ApplicationController(ApplicationView *v):Controller(v){
 
 
 void ApplicationController::logic(){
-
+	Studente s;
+	Valutazione v;
 	int scelta=3;
 
 	std::cin >> scelta;//acquisisce l'input da tastiera (in futuro potrebbe farlo l'handleEvent)
@@ -20,18 +20,18 @@ void ApplicationController::logic(){
 	switch(scelta){
 
 		case 0: //semplicemente esegue l'istr. successiva nel main (si dovrebbero invocare i distruttori degli oggetti non pi� utili)
+		
 			exit(0);
 			break;
-
+			
 		case 1:
-			Studente s;
 			((ApplicationModel*)model)->aggiornaDati(((ApplicationView*)view)->acquisisciStudente(s));
 			break;
-
-		/*case 2:
-			((ApplicationModel*)model)->aggiornaVoti(((ApplicationView*)view)->inserisciVoto(s));
-			break;*/
-
+		
+		case 2:
+			((ApplicationModel*)model)->aggiornaVoti(((ApplicationView*)view)->acquisiciVoti(v));
+			break;
+			
 	/*default
 	:((ApplicationModel*)model)->loadValue(((ApplicationModel*)model)->getValue());//non cambia nulla! Si potrebbe segnale un errore dal view
 		break;
@@ -46,5 +46,5 @@ void ApplicationController::logic(){
 }*/
 
 //funzione alla quale in futuro potrebbe essere associata la tastiera
-void MVC::Controller::handleEvent(MVC::Event * e) {;//fai qualcosa
-}
+/*void MVC::Controller::handleEvent(MVC::Event * e) {;//fai qualcosa
+}*/
